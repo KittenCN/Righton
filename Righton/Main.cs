@@ -17,7 +17,6 @@ namespace Righton
         {
             InitializeComponent();
         }
-
         private void btn_insertData_Click(object sender, EventArgs e)
         {
             DataTable TempDT = null;
@@ -25,7 +24,6 @@ namespace Righton
             lab_Result.Visible = false;
             dgv_Gene_Ori.DataSource = TempDT;
             dgv_Gene_Process.DataSource = TempDT;
-
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "Excel文件(xlsx)|*.xlsx|Excel文件(xls)|*.xls";
             if (openFileDialog.ShowDialog() == DialogResult.OK)
@@ -63,7 +61,6 @@ namespace Righton
                 }
             }
         }
-
         private void btn_cal_Click(object sender, EventArgs e)
         {
             try
