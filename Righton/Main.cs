@@ -66,97 +66,86 @@ namespace Righton
 
         private void btn_cal_Click(object sender, EventArgs e)
         {
-            DataTable dtGene_Process = dtGene_Ori.Copy();
-            ////计算公式是：1. （5个内参平均值）-目的 + 10
-            double dbl_avg = (double.Parse(dtGene_Ori.Rows[4][1].ToString()) + double.Parse(dtGene_Ori.Rows[5][1].ToString()) + double.Parse(dtGene_Ori.Rows[18][1].ToString()) + double.Parse(dtGene_Ori.Rows[19][1].ToString()) + double.Parse(dtGene_Ori.Rows[20][1].ToString())) / 5;
-            for(int i = 0; i < dtGene_Process.Rows.Count; i++)
+            try
             {
-                if(i==4 || i==5 || i==18 || i==19 || i==20)
+                DataTable dtGene_Process = dtGene_Ori.Copy();
+                ////计算公式是：1. （5个内参平均值）-目的 + 10
+                double dbl_avg = (double.Parse(dtGene_Ori.Rows[4][1].ToString()) + double.Parse(dtGene_Ori.Rows[5][1].ToString()) + double.Parse(dtGene_Ori.Rows[18][1].ToString()) + double.Parse(dtGene_Ori.Rows[19][1].ToString()) + double.Parse(dtGene_Ori.Rows[20][1].ToString())) / 5;
+                for (int i = 0; i < dtGene_Process.Rows.Count; i++)
                 {
-                    continue;
+                    if (i == 4 || i == 5 || i == 18 || i == 19 || i == 20)
+                    {
+                        continue;
+                    }
+                    else
+                    {
+                        dtGene_Process.Rows[i][1] = (dbl_avg - double.Parse(dtGene_Ori.Rows[i][1].ToString()) + 10).ToString("0.000");
+                    }
+                }
+                dgv_Gene_Process.AutoGenerateColumns = false;
+                dgv_Gene_Process.DataSource = dtGene_Process;
+                double dblERBB = double.Parse(dtGene_Process.Rows[10][1].ToString());
+                double dblSTK15 = double.Parse(dtGene_Process.Rows[7][1].ToString());
+                ////1   ER 目的
+                ////2   BCL2 目的
+                ////3   BIR(Survivin)   目的
+                ////4   MMP11 目的
+                ////5   ACTB 内参
+                ////6   GAPD 内参
+                ////7   GRB7 目的
+                ////8   AUR（STK15)	目的
+                ////9   CTSL2 目的
+                ////10  GST 目的
+                ////11  ERBB 目的
+                ////12  MYBL2 目的
+                ////13  MKI(Ki67)   目的
+                ////14  PGR 目的
+                ////15  CD68 目的
+                ////16  BAG 目的
+                ////17  CCNB1 目的
+                ////18  SCUB 目的
+                ////19  RPL 内参
+                ////20  TFR 内参
+                ////21  GUS 内参
+                ////1.GBR7组值 = 0.9×GRB7 + 0.1×HER2(如果值小于8，算作8）									
+                double dblGBR7 = 0.9 * double.Parse(dtGene_Process.Rows[6][1].ToString()) + 0.1 * dblERBB;
+                if (dblGBR7 < 8)
+                {
+                    dblGBR7 = 8;
+                }
+                ////2.ER组值 = 0.25×（0.8×ER + 1.2×PGR + BCL2 + SCUBZ）									
+                double dblER = 0.25 * (0.8 * double.Parse(dtGene_Process.Rows[0][1].ToString()) + 1.2 * double.Parse(dtGene_Process.Rows[13][1].ToString()) + double.Parse(dtGene_Process.Rows[1][1].ToString()) + double.Parse(dtGene_Process.Rows[17][1].ToString()));
+                ////3.增值组值 = 0.2×(Survivin + Ki67 + MyBL2 + Cyclin + STK15) （如果值小于6.5，算作6.5）									
+                double dblIncrement = 0.2 * (double.Parse(dtGene_Process.Rows[2][1].ToString()) + double.Parse(dtGene_Process.Rows[12][1].ToString()) + double.Parse(dtGene_Process.Rows[11][1].ToString()) + double.Parse(dtGene_Process.Rows[16][1].ToString()) + dblSTK15);
+                if (dblIncrement < 6.5)
+                {
+                    dblIncrement = 6.5;
+                }
+                ////4.侵袭组值 = 0.5×（Cathepsin L2 + (MMP 11）		
+                double dblAttack = 0.5 * (double.Parse(dtGene_Process.Rows[8][1].ToString()) + double.Parse(dtGene_Process.Rows[3][1].ToString()));
+                ////5.RSu =（0.47× GBR7组值）-（0.34× ER组值）+（1.04× 增值组值）+（0.1×侵袭组值）+（0.05×CD68）-(0.08×GSTM1) -（0.07×BAG1）																		
+                ////如果RSu < 0,则RS = 0    如果0≤ RSu≤100，RS = 20×(RSu - 6.7)     如果RSu > 100，则RS = 100
+                double dblRsu = (0.47 * dblGBR7) - (0.34 * dblER) + (1.04 * dblIncrement) + (0.1 * dblAttack) + (0.05 * double.Parse(dtGene_Process.Rows[14][1].ToString())) - (0.08 * double.Parse(dtGene_Process.Rows[9][1].ToString())) - (0.07 * double.Parse(dtGene_Process.Rows[15][1].ToString()));
+                double dblRS = 0;
+                if (dblRsu < 0)
+                {
+                    dblRS = 0;
+                }
+                else if (dblRsu >= 0 && dblRsu <= 100)
+                {
+                    dblRS = 20 * (dblRsu - 6.7);
                 }
                 else
                 {
-                    dtGene_Process.Rows[i][1] = (dbl_avg - double.Parse(dtGene_Ori.Rows[i][1].ToString()) + 10).ToString("0.000");
+                    dblRS = 100;
                 }
+                lab_Result.Text = "RS = " + dblRS.ToString();
+                lab_Result.Visible = true;
             }
-            dgv_Gene_Process.AutoGenerateColumns = false;
-            dgv_Gene_Process.DataSource = dtGene_Process;
-            double dblERBB = 8;
-            double dblSTK15 = 6.5;
-            //if(double.Parse(dtGene_Process.Rows[10][1].ToString()) < 8)
-            //{
-            //    dblERBB = 8;
-            //}
-            //else
-            //{
-            //    dblERBB = double.Parse(dtGene_Process.Rows[10][1].ToString());
-            //}
-            //if (double.Parse(dtGene_Process.Rows[7][1].ToString()) < 6.5)
-            //{
-            //    dblSTK15 = 6.5;
-            //}
-            //else
-            //{
-            //    dblSTK15 = double.Parse(dtGene_Process.Rows[7][1].ToString());
-            //}
-            dblERBB = double.Parse(dtGene_Process.Rows[10][1].ToString());
-            dblSTK15 = double.Parse(dtGene_Process.Rows[7][1].ToString());
-            ////1   ER 目的
-            ////2   BCL2 目的
-            ////3   BIR(Survivin)   目的
-            ////4   MMP11 目的
-            ////5   ACTB 内参
-            ////6   GAPD 内参
-            ////7   GRB7 目的
-            ////8   AUR（STK15)	目的
-            ////9   CTSL2 目的
-            ////10  GST 目的
-            ////11  ERBB 目的
-            ////12  MYBL2 目的
-            ////13  MKI(Ki67)   目的
-            ////14  PGR 目的
-            ////15  CD68 目的
-            ////16  BAG 目的
-            ////17  CCNB1 目的
-            ////18  SCUB 目的
-            ////19  RPL 内参
-            ////20  TFR 内参
-            ////21  GUS 内参
-            ////1.GBR7组值 = 0.9×GRB7 + 0.1×HER2(如果值小于8，算作8）									
-            double dblGBR7 = 0.9 * double.Parse(dtGene_Process.Rows[6][1].ToString()) + 0.1 * dblERBB;
-            if (dblGBR7 < 8)
+            catch(Exception ex)
             {
-                dblGBR7 = 8;
+                MessageBox.Show("程序故障::" + ex.Message + "请联系开发商!");
             }
-            ////2.ER组值 = 0.25×（0.8×ER + 1.2×PGR + BCL2 + SCUBZ）									
-            double dblER = 0.25 * (0.8 * double.Parse(dtGene_Process.Rows[0][1].ToString()) + 1.2 * double.Parse(dtGene_Process.Rows[13][1].ToString()) + double.Parse(dtGene_Process.Rows[1][1].ToString()) + double.Parse(dtGene_Process.Rows[17][1].ToString()));
-            ////3.增值组值 = 0.2×(Survivin + Ki67 + MyBL2 + Cyclin + STK15) （如果值小于6.5，算作6.5）									
-            double dblIncrement = 0.2 * (double.Parse(dtGene_Process.Rows[2][1].ToString()) + double.Parse(dtGene_Process.Rows[12][1].ToString()) + double.Parse(dtGene_Process.Rows[11][1].ToString()) + double.Parse(dtGene_Process.Rows[16][1].ToString()) + dblSTK15);
-            if(dblIncrement < 6.5)
-            {
-                dblIncrement = 6.5;
-            }
-            ////4.侵袭组值 = 0.5×（Cathepsin L2 + (MMP 11）		
-            double dblAttack = 0.5 * (double.Parse(dtGene_Process.Rows[8][1].ToString()) + double.Parse(dtGene_Process.Rows[3][1].ToString()));
-            ////5.RSu =（0.47× GBR7组值）-（0.34× ER组值）+（1.04× 增值组值）+（0.1×侵袭组值）+（0.05×CD68）-(0.08×GSTM1) -（0.07×BAG1）																		
-            ////如果RSu < 0,则RS = 0    如果0≤ RSu≤100，RS = 20×(RSu - 6.7)     如果RSu > 100，则RS = 100
-            double dblRsu = (0.47 * dblGBR7) - (0.34 * dblER) + (1.04 * dblIncrement) + (0.1 * dblAttack) + (0.05 * double.Parse(dtGene_Process.Rows[14][1].ToString())) - (0.08 * double.Parse(dtGene_Process.Rows[9][1].ToString())) - (0.07 * double.Parse(dtGene_Process.Rows[15][1].ToString()));
-            double dblRS = 0;
-            if(dblRsu < 0)
-            {
-                dblRS = 0;
-            }
-            else if(dblRsu >= 0 && dblRsu <= 100)
-            {
-                dblRS = 20 * (dblRsu - 6.7);
-            }
-            else
-            {
-                dblRS = 100;
-            }
-            lab_Result.Text = "RS = " + dblRS.ToString();
-            lab_Result.Visible = true;
         }
     }
 }
