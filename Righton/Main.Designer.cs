@@ -31,19 +31,20 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(form_Main));
             this.pb_Logo = new System.Windows.Forms.PictureBox();
             this.panel_workspace = new System.Windows.Forms.Panel();
-            this.dgv_Gene_Ori = new System.Windows.Forms.DataGridView();
-            this.btn_cal = new System.Windows.Forms.Button();
-            this.btn_insertData = new System.Windows.Forms.Button();
-            this.Gene = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ct = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lab_Result = new System.Windows.Forms.Label();
             this.dgv_Gene_Process = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lab_Result = new System.Windows.Forms.Label();
+            this.dgv_Gene_Ori = new System.Windows.Forms.DataGridView();
+            this.Gene = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ct = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_cal = new System.Windows.Forms.Button();
+            this.btn_insertData = new System.Windows.Forms.Button();
+            this.btn_aboutme = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Logo)).BeginInit();
             this.panel_workspace.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Gene_Ori)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Gene_Process)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Gene_Ori)).BeginInit();
             this.SuspendLayout();
             // 
             // pb_Logo
@@ -59,6 +60,7 @@
             // panel_workspace
             // 
             this.panel_workspace.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel_workspace.BackgroundImage")));
+            this.panel_workspace.Controls.Add(this.btn_aboutme);
             this.panel_workspace.Controls.Add(this.lab_Result);
             this.panel_workspace.Controls.Add(this.dgv_Gene_Process);
             this.panel_workspace.Controls.Add(this.dgv_Gene_Ori);
@@ -69,59 +71,17 @@
             this.panel_workspace.Size = new System.Drawing.Size(800, 600);
             this.panel_workspace.TabIndex = 1;
             // 
-            // dgv_Gene_Ori
+            // lab_Result
             // 
-            this.dgv_Gene_Ori.AllowUserToAddRows = false;
-            this.dgv_Gene_Ori.AllowUserToDeleteRows = false;
-            this.dgv_Gene_Ori.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Gene_Ori.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Gene,
-            this.Ct});
-            this.dgv_Gene_Ori.Location = new System.Drawing.Point(10, 62);
-            this.dgv_Gene_Ori.Name = "dgv_Gene_Ori";
-            this.dgv_Gene_Ori.ReadOnly = true;
-            this.dgv_Gene_Ori.RowTemplate.Height = 30;
-            this.dgv_Gene_Ori.Size = new System.Drawing.Size(390, 531);
-            this.dgv_Gene_Ori.TabIndex = 2;
-            // 
-            // btn_cal
-            // 
-            this.btn_cal.Enabled = false;
-            this.btn_cal.Location = new System.Drawing.Point(131, 4);
-            this.btn_cal.Name = "btn_cal";
-            this.btn_cal.Size = new System.Drawing.Size(115, 51);
-            this.btn_cal.TabIndex = 1;
-            this.btn_cal.Text = "Process";
-            this.btn_cal.UseVisualStyleBackColor = true;
-            this.btn_cal.Click += new System.EventHandler(this.btn_cal_Click);
-            // 
-            // btn_insertData
-            // 
-            this.btn_insertData.Location = new System.Drawing.Point(10, 4);
-            this.btn_insertData.Name = "btn_insertData";
-            this.btn_insertData.Size = new System.Drawing.Size(115, 51);
-            this.btn_insertData.TabIndex = 0;
-            this.btn_insertData.Text = "InputExcel";
-            this.btn_insertData.UseVisualStyleBackColor = true;
-            this.btn_insertData.Click += new System.EventHandler(this.btn_insertData_Click);
-            // 
-            // Gene
-            // 
-            this.Gene.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Gene.DataPropertyName = "Gene";
-            this.Gene.HeaderText = "Gene";
-            this.Gene.Name = "Gene";
-            this.Gene.ReadOnly = true;
-            this.Gene.Width = 80;
-            // 
-            // Ct
-            // 
-            this.Ct.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Ct.DataPropertyName = "Ct";
-            this.Ct.HeaderText = "Ct";
-            this.Ct.Name = "Ct";
-            this.Ct.ReadOnly = true;
-            this.Ct.Width = 62;
+            this.lab_Result.AutoSize = true;
+            this.lab_Result.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lab_Result.ForeColor = System.Drawing.Color.Red;
+            this.lab_Result.Location = new System.Drawing.Point(297, 4);
+            this.lab_Result.Name = "lab_Result";
+            this.lab_Result.Size = new System.Drawing.Size(87, 36);
+            this.lab_Result.TabIndex = 4;
+            this.lab_Result.Text = "RS=*";
+            this.lab_Result.Visible = false;
             // 
             // dgv_Gene_Process
             // 
@@ -156,17 +116,69 @@
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
             this.dataGridViewTextBoxColumn2.Width = 62;
             // 
-            // lab_Result
+            // dgv_Gene_Ori
             // 
-            this.lab_Result.AutoSize = true;
-            this.lab_Result.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lab_Result.ForeColor = System.Drawing.Color.Red;
-            this.lab_Result.Location = new System.Drawing.Point(484, 4);
-            this.lab_Result.Name = "lab_Result";
-            this.lab_Result.Size = new System.Drawing.Size(87, 36);
-            this.lab_Result.TabIndex = 4;
-            this.lab_Result.Text = "RS=*";
-            this.lab_Result.Visible = false;
+            this.dgv_Gene_Ori.AllowUserToAddRows = false;
+            this.dgv_Gene_Ori.AllowUserToDeleteRows = false;
+            this.dgv_Gene_Ori.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Gene_Ori.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Gene,
+            this.Ct});
+            this.dgv_Gene_Ori.Location = new System.Drawing.Point(10, 62);
+            this.dgv_Gene_Ori.Name = "dgv_Gene_Ori";
+            this.dgv_Gene_Ori.ReadOnly = true;
+            this.dgv_Gene_Ori.RowTemplate.Height = 30;
+            this.dgv_Gene_Ori.Size = new System.Drawing.Size(390, 531);
+            this.dgv_Gene_Ori.TabIndex = 2;
+            // 
+            // Gene
+            // 
+            this.Gene.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Gene.DataPropertyName = "Gene";
+            this.Gene.HeaderText = "Gene";
+            this.Gene.Name = "Gene";
+            this.Gene.ReadOnly = true;
+            this.Gene.Width = 80;
+            // 
+            // Ct
+            // 
+            this.Ct.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Ct.DataPropertyName = "Ct";
+            this.Ct.HeaderText = "Ct";
+            this.Ct.Name = "Ct";
+            this.Ct.ReadOnly = true;
+            this.Ct.Width = 62;
+            // 
+            // btn_cal
+            // 
+            this.btn_cal.Enabled = false;
+            this.btn_cal.Location = new System.Drawing.Point(131, 4);
+            this.btn_cal.Name = "btn_cal";
+            this.btn_cal.Size = new System.Drawing.Size(115, 51);
+            this.btn_cal.TabIndex = 1;
+            this.btn_cal.Text = "Process";
+            this.btn_cal.UseVisualStyleBackColor = true;
+            this.btn_cal.Click += new System.EventHandler(this.btn_cal_Click);
+            // 
+            // btn_insertData
+            // 
+            this.btn_insertData.Location = new System.Drawing.Point(10, 4);
+            this.btn_insertData.Name = "btn_insertData";
+            this.btn_insertData.Size = new System.Drawing.Size(115, 51);
+            this.btn_insertData.TabIndex = 0;
+            this.btn_insertData.Text = "InputExcel";
+            this.btn_insertData.UseVisualStyleBackColor = true;
+            this.btn_insertData.Click += new System.EventHandler(this.btn_insertData_Click);
+            // 
+            // btn_aboutme
+            // 
+            this.btn_aboutme.Location = new System.Drawing.Point(681, 3);
+            this.btn_aboutme.Name = "btn_aboutme";
+            this.btn_aboutme.Size = new System.Drawing.Size(115, 51);
+            this.btn_aboutme.TabIndex = 5;
+            this.btn_aboutme.Text = "AboutMe";
+            this.btn_aboutme.UseVisualStyleBackColor = true;
+            this.btn_aboutme.Click += new System.EventHandler(this.btn_aboutme_Click);
             // 
             // form_Main
             // 
@@ -184,8 +196,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb_Logo)).EndInit();
             this.panel_workspace.ResumeLayout(false);
             this.panel_workspace.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Gene_Ori)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Gene_Process)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Gene_Ori)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -203,6 +215,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.Label lab_Result;
+        private System.Windows.Forms.Button btn_aboutme;
     }
 }
 

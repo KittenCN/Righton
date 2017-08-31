@@ -144,5 +144,10 @@ namespace Righton
                 MessageBox.Show("程序故障::" + ex.Message + "请联系开发商!");
             }
         }
+
+        private void btn_aboutme_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("copyright (c) 2017 上海睿昂生物技术有限公司");
+        }
     }
 }
