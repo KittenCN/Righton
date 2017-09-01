@@ -34,14 +34,14 @@
             this.btn_aboutme = new System.Windows.Forms.Button();
             this.lab_Result = new System.Windows.Forms.Label();
             this.dgv_Gene_Process = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv_Gene_Ori = new System.Windows.Forms.DataGridView();
-            this.Gene = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ct = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_cal = new System.Windows.Forms.Button();
             this.btn_insertData = new System.Windows.Forms.Button();
             this.pb_foot = new System.Windows.Forms.PictureBox();
+            this.Gene = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ct = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Logo)).BeginInit();
             this.panel_workspace.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Gene_Process)).BeginInit();
@@ -83,6 +83,7 @@
             this.btn_aboutme.TabIndex = 5;
             this.btn_aboutme.Text = "AboutMe";
             this.btn_aboutme.UseVisualStyleBackColor = true;
+            this.btn_aboutme.Visible = false;
             this.btn_aboutme.Click += new System.EventHandler(this.btn_aboutme_Click);
             // 
             // lab_Result
@@ -115,24 +116,6 @@
             this.dgv_Gene_Process.Size = new System.Drawing.Size(540, 708);
             this.dgv_Gene_Process.TabIndex = 3;
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Gene";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Gene";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 103;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Ct";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Ct";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 79;
-            // 
             // dgv_Gene_Ori
             // 
             this.dgv_Gene_Ori.AllowUserToAddRows = false;
@@ -149,24 +132,6 @@
             this.dgv_Gene_Ori.RowTemplate.Height = 30;
             this.dgv_Gene_Ori.Size = new System.Drawing.Size(533, 708);
             this.dgv_Gene_Ori.TabIndex = 2;
-            // 
-            // Gene
-            // 
-            this.Gene.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Gene.DataPropertyName = "Gene";
-            this.Gene.HeaderText = "Gene";
-            this.Gene.Name = "Gene";
-            this.Gene.ReadOnly = true;
-            this.Gene.Width = 103;
-            // 
-            // Ct
-            // 
-            this.Ct.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Ct.DataPropertyName = "Ct";
-            this.Ct.HeaderText = "Ct";
-            this.Ct.Name = "Ct";
-            this.Ct.ReadOnly = true;
-            this.Ct.Width = 79;
             // 
             // btn_cal
             // 
@@ -202,6 +167,38 @@
             this.pb_foot.TabIndex = 2;
             this.pb_foot.TabStop = false;
             // 
+            // Gene
+            // 
+            this.Gene.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Gene.DataPropertyName = "Gene";
+            this.Gene.HeaderText = "Gene";
+            this.Gene.Name = "Gene";
+            this.Gene.ReadOnly = true;
+            // 
+            // Ct
+            // 
+            this.Ct.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Ct.DataPropertyName = "Ct";
+            this.Ct.HeaderText = "Ct";
+            this.Ct.Name = "Ct";
+            this.Ct.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Gene";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Gene";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Ct";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Ct";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
             // form_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
@@ -217,7 +214,7 @@
             this.MaximizeBox = false;
             this.Name = "form_Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "nm";
+            this.Text = "Righton";
             ((System.ComponentModel.ISupportInitialize)(this.pb_Logo)).EndInit();
             this.panel_workspace.ResumeLayout(false);
             this.panel_workspace.PerformLayout();
@@ -235,14 +232,14 @@
         private System.Windows.Forms.DataGridView dgv_Gene_Ori;
         private System.Windows.Forms.Button btn_cal;
         private System.Windows.Forms.Button btn_insertData;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Gene;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Ct;
         private System.Windows.Forms.DataGridView dgv_Gene_Process;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.Label lab_Result;
         private System.Windows.Forms.Button btn_aboutme;
         private System.Windows.Forms.PictureBox pb_foot;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Gene;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ct;
     }
 }
 
