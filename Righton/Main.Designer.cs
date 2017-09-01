@@ -53,7 +53,7 @@
             // 
             this.pb_Logo.Image = ((System.Drawing.Image)(resources.GetObject("pb_Logo.Image")));
             this.pb_Logo.Location = new System.Drawing.Point(4, 5);
-            this.pb_Logo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pb_Logo.Margin = new System.Windows.Forms.Padding(4);
             this.pb_Logo.Name = "pb_Logo";
             this.pb_Logo.Size = new System.Drawing.Size(1067, 95);
             this.pb_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -69,7 +69,7 @@
             this.panel_workspace.Controls.Add(this.btn_cal);
             this.panel_workspace.Controls.Add(this.btn_insertData);
             this.panel_workspace.Location = new System.Drawing.Point(4, 109);
-            this.panel_workspace.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel_workspace.Margin = new System.Windows.Forms.Padding(4);
             this.panel_workspace.Name = "panel_workspace";
             this.panel_workspace.Size = new System.Drawing.Size(1079, 898);
             this.panel_workspace.TabIndex = 1;
@@ -77,7 +77,7 @@
             // btn_aboutme
             // 
             this.btn_aboutme.Location = new System.Drawing.Point(908, 4);
-            this.btn_aboutme.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_aboutme.Margin = new System.Windows.Forms.Padding(4);
             this.btn_aboutme.Name = "btn_aboutme";
             this.btn_aboutme.Size = new System.Drawing.Size(153, 68);
             this.btn_aboutme.TabIndex = 5;
@@ -102,12 +102,13 @@
             // 
             this.dgv_Gene_Process.AllowUserToAddRows = false;
             this.dgv_Gene_Process.AllowUserToDeleteRows = false;
+            this.dgv_Gene_Process.BackgroundColor = System.Drawing.Color.White;
             this.dgv_Gene_Process.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Gene_Process.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2});
             this.dgv_Gene_Process.Location = new System.Drawing.Point(535, 83);
-            this.dgv_Gene_Process.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgv_Gene_Process.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_Gene_Process.Name = "dgv_Gene_Process";
             this.dgv_Gene_Process.ReadOnly = true;
             this.dgv_Gene_Process.RowTemplate.Height = 30;
@@ -136,12 +137,13 @@
             // 
             this.dgv_Gene_Ori.AllowUserToAddRows = false;
             this.dgv_Gene_Ori.AllowUserToDeleteRows = false;
+            this.dgv_Gene_Ori.BackgroundColor = System.Drawing.Color.White;
             this.dgv_Gene_Ori.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Gene_Ori.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Gene,
             this.Ct});
             this.dgv_Gene_Ori.Location = new System.Drawing.Point(0, 83);
-            this.dgv_Gene_Ori.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgv_Gene_Ori.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_Gene_Ori.Name = "dgv_Gene_Ori";
             this.dgv_Gene_Ori.ReadOnly = true;
             this.dgv_Gene_Ori.RowTemplate.Height = 30;
@@ -170,7 +172,7 @@
             // 
             this.btn_cal.Enabled = false;
             this.btn_cal.Location = new System.Drawing.Point(175, 5);
-            this.btn_cal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_cal.Margin = new System.Windows.Forms.Padding(4);
             this.btn_cal.Name = "btn_cal";
             this.btn_cal.Size = new System.Drawing.Size(153, 68);
             this.btn_cal.TabIndex = 1;
@@ -181,7 +183,7 @@
             // btn_insertData
             // 
             this.btn_insertData.Location = new System.Drawing.Point(13, 5);
-            this.btn_insertData.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_insertData.Margin = new System.Windows.Forms.Padding(4);
             this.btn_insertData.Name = "btn_insertData";
             this.btn_insertData.Size = new System.Drawing.Size(153, 68);
             this.btn_insertData.TabIndex = 0;
@@ -211,11 +213,11 @@
             this.Controls.Add(this.pb_Logo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "form_Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Righton";
+            this.Text = "nm";
             ((System.ComponentModel.ISupportInitialize)(this.pb_Logo)).EndInit();
             this.panel_workspace.ResumeLayout(false);
             this.panel_workspace.PerformLayout();
