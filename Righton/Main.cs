@@ -136,8 +136,9 @@ namespace Righton
                 {
                     dblRS = 100;
                 }
-                lab_Result.Text = "RS = " + dblRS.ToString();
-                lab_Result.Visible = true;
+                //lab_Result.Text = "RS = " + dblRS.ToString();
+                //lab_Result.Visible = true;
+                MessageBox.Show("RS = " + dblRS.ToString());
             }
             catch(Exception ex)
             {
