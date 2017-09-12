@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(form_Main));
             this.pb_Logo = new System.Windows.Forms.PictureBox();
-            this.panel_workspace = new System.Windows.Forms.Panel();
             this.btn_aboutme = new System.Windows.Forms.Button();
             this.lab_Result = new System.Windows.Forms.Label();
             this.dgv_Gene_Process = new System.Windows.Forms.DataGridView();
@@ -39,10 +38,10 @@
             this.dgv_Gene_Ori = new System.Windows.Forms.DataGridView();
             this.Gene = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ct = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btn_cal = new System.Windows.Forms.Button();
             this.btn_insertData = new System.Windows.Forms.Button();
+            this.btn_cal = new System.Windows.Forms.Button();
+            this.panel_workspace = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Logo)).BeginInit();
-            this.panel_workspace.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Gene_Process)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Gene_Ori)).BeginInit();
             this.SuspendLayout();
@@ -58,25 +57,10 @@
             this.pb_Logo.TabIndex = 0;
             this.pb_Logo.TabStop = false;
             // 
-            // panel_workspace
-            // 
-            this.panel_workspace.BackColor = System.Drawing.SystemColors.Control;
-            this.panel_workspace.Controls.Add(this.btn_aboutme);
-            this.panel_workspace.Controls.Add(this.lab_Result);
-            this.panel_workspace.Controls.Add(this.dgv_Gene_Process);
-            this.panel_workspace.Controls.Add(this.dgv_Gene_Ori);
-            this.panel_workspace.Controls.Add(this.btn_cal);
-            this.panel_workspace.Controls.Add(this.btn_insertData);
-            this.panel_workspace.Location = new System.Drawing.Point(46, 78);
-            this.panel_workspace.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel_workspace.Name = "panel_workspace";
-            this.panel_workspace.Size = new System.Drawing.Size(772, 638);
-            this.panel_workspace.TabIndex = 1;
-            // 
             // btn_aboutme
             // 
-            this.btn_aboutme.Location = new System.Drawing.Point(692, 4);
-            this.btn_aboutme.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_aboutme.Location = new System.Drawing.Point(880, 11);
+            this.btn_aboutme.Margin = new System.Windows.Forms.Padding(2);
             this.btn_aboutme.Name = "btn_aboutme";
             this.btn_aboutme.Size = new System.Drawing.Size(76, 34);
             this.btn_aboutme.TabIndex = 5;
@@ -90,11 +74,11 @@
             this.lab_Result.AutoSize = true;
             this.lab_Result.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lab_Result.ForeColor = System.Drawing.Color.Red;
-            this.lab_Result.Location = new System.Drawing.Point(351, 4);
+            this.lab_Result.Location = new System.Drawing.Point(392, 83);
             this.lab_Result.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lab_Result.Name = "lab_Result";
             this.lab_Result.Size = new System.Drawing.Size(58, 24);
-            this.lab_Result.TabIndex = 4;
+            this.lab_Result.TabIndex = 10;
             this.lab_Result.Text = "RS=*";
             this.lab_Result.Visible = false;
             // 
@@ -107,13 +91,13 @@
             this.dgv_Gene_Process.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2});
-            this.dgv_Gene_Process.Location = new System.Drawing.Point(386, 42);
-            this.dgv_Gene_Process.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgv_Gene_Process.Location = new System.Drawing.Point(427, 121);
+            this.dgv_Gene_Process.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_Gene_Process.Name = "dgv_Gene_Process";
             this.dgv_Gene_Process.ReadOnly = true;
             this.dgv_Gene_Process.RowTemplate.Height = 30;
             this.dgv_Gene_Process.Size = new System.Drawing.Size(382, 594);
-            this.dgv_Gene_Process.TabIndex = 3;
+            this.dgv_Gene_Process.TabIndex = 9;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -140,13 +124,13 @@
             this.dgv_Gene_Ori.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Gene,
             this.Ct});
-            this.dgv_Gene_Ori.Location = new System.Drawing.Point(2, 42);
-            this.dgv_Gene_Ori.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgv_Gene_Ori.Location = new System.Drawing.Point(43, 121);
+            this.dgv_Gene_Ori.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_Gene_Ori.Name = "dgv_Gene_Ori";
             this.dgv_Gene_Ori.ReadOnly = true;
             this.dgv_Gene_Ori.RowTemplate.Height = 30;
             this.dgv_Gene_Ori.Size = new System.Drawing.Size(382, 594);
-            this.dgv_Gene_Ori.TabIndex = 2;
+            this.dgv_Gene_Ori.TabIndex = 8;
             // 
             // Gene
             // 
@@ -164,47 +148,62 @@
             this.Ct.Name = "Ct";
             this.Ct.ReadOnly = true;
             // 
+            // btn_insertData
+            // 
+            this.btn_insertData.Location = new System.Drawing.Point(43, 83);
+            this.btn_insertData.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_insertData.Name = "btn_insertData";
+            this.btn_insertData.Size = new System.Drawing.Size(76, 34);
+            this.btn_insertData.TabIndex = 6;
+            this.btn_insertData.Text = "Data";
+            this.btn_insertData.UseVisualStyleBackColor = true;
+            this.btn_insertData.Click += new System.EventHandler(this.btn_insertData_Click);
+            // 
             // btn_cal
             // 
             this.btn_cal.Enabled = false;
-            this.btn_cal.Location = new System.Drawing.Point(82, 4);
-            this.btn_cal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_cal.Location = new System.Drawing.Point(123, 83);
+            this.btn_cal.Margin = new System.Windows.Forms.Padding(2);
             this.btn_cal.Name = "btn_cal";
             this.btn_cal.Size = new System.Drawing.Size(76, 34);
-            this.btn_cal.TabIndex = 1;
+            this.btn_cal.TabIndex = 7;
             this.btn_cal.Text = "Process";
             this.btn_cal.UseVisualStyleBackColor = true;
             this.btn_cal.Click += new System.EventHandler(this.btn_cal_Click);
             // 
-            // btn_insertData
+            // panel_workspace
             // 
-            this.btn_insertData.Location = new System.Drawing.Point(2, 4);
-            this.btn_insertData.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btn_insertData.Name = "btn_insertData";
-            this.btn_insertData.Size = new System.Drawing.Size(76, 34);
-            this.btn_insertData.TabIndex = 0;
-            this.btn_insertData.Text = "Data";
-            this.btn_insertData.UseVisualStyleBackColor = true;
-            this.btn_insertData.Click += new System.EventHandler(this.btn_insertData_Click);
+            this.panel_workspace.BackColor = System.Drawing.SystemColors.Control;
+            this.panel_workspace.Location = new System.Drawing.Point(880, 77);
+            this.panel_workspace.Margin = new System.Windows.Forms.Padding(2);
+            this.panel_workspace.Name = "panel_workspace";
+            this.panel_workspace.Size = new System.Drawing.Size(772, 638);
+            this.panel_workspace.TabIndex = 1;
+            this.panel_workspace.Visible = false;
             // 
             // form_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(863, 788);
+            this.ClientSize = new System.Drawing.Size(864, 790);
+            this.Controls.Add(this.lab_Result);
+            this.Controls.Add(this.dgv_Gene_Process);
+            this.Controls.Add(this.dgv_Gene_Ori);
+            this.Controls.Add(this.btn_insertData);
+            this.Controls.Add(this.btn_cal);
+            this.Controls.Add(this.btn_aboutme);
             this.Controls.Add(this.panel_workspace);
             this.Controls.Add(this.pb_Logo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "form_Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Righton";
+            this.Load += new System.EventHandler(this.form_Main_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pb_Logo)).EndInit();
-            this.panel_workspace.ResumeLayout(false);
-            this.panel_workspace.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Gene_Process)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Gene_Ori)).EndInit();
             this.ResumeLayout(false);
@@ -215,17 +214,17 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pb_Logo;
-        private System.Windows.Forms.Panel panel_workspace;
-        private System.Windows.Forms.DataGridView dgv_Gene_Ori;
-        private System.Windows.Forms.Button btn_cal;
-        private System.Windows.Forms.Button btn_insertData;
-        private System.Windows.Forms.DataGridView dgv_Gene_Process;
-        private System.Windows.Forms.Label lab_Result;
         private System.Windows.Forms.Button btn_aboutme;
+        private System.Windows.Forms.Label lab_Result;
+        private System.Windows.Forms.DataGridView dgv_Gene_Process;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridView dgv_Gene_Ori;
         private System.Windows.Forms.DataGridViewTextBoxColumn Gene;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ct;
+        private System.Windows.Forms.Button btn_insertData;
+        private System.Windows.Forms.Button btn_cal;
+        private System.Windows.Forms.Panel panel_workspace;
     }
 }
 

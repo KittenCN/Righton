@@ -150,5 +150,10 @@ namespace Righton
         {
             MessageBox.Show("copyright (c) 2017 上海睿昂生物技术有限公司");
         }
+
+        private void form_Main_Load(object sender, EventArgs e)
+        {
+            panel_workspace.BackColor = Color.FromArgb(65, 204, 212, 230);
+        }
     }
 }
