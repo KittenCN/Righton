@@ -53,8 +53,8 @@
             this.pb_Logo.Location = new System.Drawing.Point(0, 0);
             this.pb_Logo.Margin = new System.Windows.Forms.Padding(0);
             this.pb_Logo.Name = "pb_Logo";
-            this.pb_Logo.Size = new System.Drawing.Size(1080, 980);
-            this.pb_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_Logo.Size = new System.Drawing.Size(864, 790);
+            this.pb_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pb_Logo.TabIndex = 0;
             this.pb_Logo.TabStop = false;
             // 
@@ -67,18 +67,18 @@
             this.panel_workspace.Controls.Add(this.dgv_Gene_Ori);
             this.panel_workspace.Controls.Add(this.btn_cal);
             this.panel_workspace.Controls.Add(this.btn_insertData);
-            this.panel_workspace.Location = new System.Drawing.Point(86, 124);
-            this.panel_workspace.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel_workspace.Location = new System.Drawing.Point(46, 78);
+            this.panel_workspace.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel_workspace.Name = "panel_workspace";
-            this.panel_workspace.Size = new System.Drawing.Size(929, 744);
+            this.panel_workspace.Size = new System.Drawing.Size(772, 638);
             this.panel_workspace.TabIndex = 1;
             // 
             // btn_aboutme
             // 
-            this.btn_aboutme.Location = new System.Drawing.Point(771, 9);
-            this.btn_aboutme.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_aboutme.Location = new System.Drawing.Point(692, 4);
+            this.btn_aboutme.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_aboutme.Name = "btn_aboutme";
-            this.btn_aboutme.Size = new System.Drawing.Size(153, 68);
+            this.btn_aboutme.Size = new System.Drawing.Size(76, 34);
             this.btn_aboutme.TabIndex = 5;
             this.btn_aboutme.Text = "AboutMe";
             this.btn_aboutme.UseVisualStyleBackColor = true;
@@ -90,10 +90,10 @@
             this.lab_Result.AutoSize = true;
             this.lab_Result.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lab_Result.ForeColor = System.Drawing.Color.Red;
-            this.lab_Result.Location = new System.Drawing.Point(397, 11);
-            this.lab_Result.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lab_Result.Location = new System.Drawing.Point(351, 4);
+            this.lab_Result.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lab_Result.Name = "lab_Result";
-            this.lab_Result.Size = new System.Drawing.Size(116, 48);
+            this.lab_Result.Size = new System.Drawing.Size(58, 24);
             this.lab_Result.TabIndex = 4;
             this.lab_Result.Text = "RS=*";
             this.lab_Result.Visible = false;
@@ -107,12 +107,12 @@
             this.dgv_Gene_Process.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2});
-            this.dgv_Gene_Process.Location = new System.Drawing.Point(468, 83);
-            this.dgv_Gene_Process.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgv_Gene_Process.Location = new System.Drawing.Point(386, 42);
+            this.dgv_Gene_Process.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgv_Gene_Process.Name = "dgv_Gene_Process";
             this.dgv_Gene_Process.ReadOnly = true;
             this.dgv_Gene_Process.RowTemplate.Height = 30;
-            this.dgv_Gene_Process.Size = new System.Drawing.Size(456, 650);
+            this.dgv_Gene_Process.Size = new System.Drawing.Size(382, 594);
             this.dgv_Gene_Process.TabIndex = 3;
             // 
             // dataGridViewTextBoxColumn1
@@ -140,12 +140,12 @@
             this.dgv_Gene_Ori.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Gene,
             this.Ct});
-            this.dgv_Gene_Ori.Location = new System.Drawing.Point(4, 83);
-            this.dgv_Gene_Ori.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgv_Gene_Ori.Location = new System.Drawing.Point(2, 42);
+            this.dgv_Gene_Ori.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgv_Gene_Ori.Name = "dgv_Gene_Ori";
             this.dgv_Gene_Ori.ReadOnly = true;
             this.dgv_Gene_Ori.RowTemplate.Height = 30;
-            this.dgv_Gene_Ori.Size = new System.Drawing.Size(456, 650);
+            this.dgv_Gene_Ori.Size = new System.Drawing.Size(382, 594);
             this.dgv_Gene_Ori.TabIndex = 2;
             // 
             // Gene
@@ -167,10 +167,10 @@
             // btn_cal
             // 
             this.btn_cal.Enabled = false;
-            this.btn_cal.Location = new System.Drawing.Point(165, 9);
-            this.btn_cal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_cal.Location = new System.Drawing.Point(82, 4);
+            this.btn_cal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_cal.Name = "btn_cal";
-            this.btn_cal.Size = new System.Drawing.Size(153, 68);
+            this.btn_cal.Size = new System.Drawing.Size(76, 34);
             this.btn_cal.TabIndex = 1;
             this.btn_cal.Text = "Process";
             this.btn_cal.UseVisualStyleBackColor = true;
@@ -178,10 +178,10 @@
             // 
             // btn_insertData
             // 
-            this.btn_insertData.Location = new System.Drawing.Point(4, 9);
-            this.btn_insertData.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_insertData.Location = new System.Drawing.Point(2, 4);
+            this.btn_insertData.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_insertData.Name = "btn_insertData";
-            this.btn_insertData.Size = new System.Drawing.Size(153, 68);
+            this.btn_insertData.Size = new System.Drawing.Size(76, 34);
             this.btn_insertData.TabIndex = 0;
             this.btn_insertData.Text = "Data";
             this.btn_insertData.UseVisualStyleBackColor = true;
@@ -189,15 +189,15 @@
             // 
             // form_Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1076, 977);
+            this.ClientSize = new System.Drawing.Size(863, 788);
             this.Controls.Add(this.panel_workspace);
             this.Controls.Add(this.pb_Logo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "form_Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -208,6 +208,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Gene_Process)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Gene_Ori)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
