@@ -103,7 +103,6 @@
             this.pb_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pb_Logo.TabIndex = 0;
             this.pb_Logo.TabStop = false;
-            this.pb_Logo.Visible = false;
             // 
             // btn_OutToWord
             // 
@@ -472,6 +471,7 @@
             this.button1.TabIndex = 45;
             this.button1.Text = "Upload";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -481,6 +481,7 @@
             this.button2.TabIndex = 48;
             this.button2.Text = "Upload";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // textBox22
             // 
@@ -507,6 +508,7 @@
             this.button3.TabIndex = 54;
             this.button3.Text = "Upload";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // textBox23
             // 
@@ -533,6 +535,7 @@
             this.button4.TabIndex = 51;
             this.button4.Text = "Upload";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // textBox24
             // 
@@ -559,6 +562,7 @@
             this.button5.TabIndex = 60;
             this.button5.Text = "Upload";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // textBox25
             // 
@@ -585,6 +589,7 @@
             this.button6.TabIndex = 57;
             this.button6.Text = "Upload";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // textBox26
             // 
@@ -677,6 +682,7 @@
             this.Name = "form_Report";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Righton";
+            this.Load += new System.EventHandler(this.form_Report_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pb_Logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

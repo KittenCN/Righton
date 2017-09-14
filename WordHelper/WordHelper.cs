@@ -248,5 +248,51 @@ namespace WordHelper
                 throw ex;
             }
         }
+        public void AddPic(string BookMark,string strPicAdd)
+        {
+            object Nothing = System.Reflection.Missing.Value;
+            //创建一个名为wordApp的组件对象
+            //Application wordApp = new Application();
+            //word文档位置
+            //object filename = @"E:\ceshi.doc";
+            //定义该插入图片是否为外部链接
+            object linkToFile = true;
+            //定义插入图片是否随word文档一起保存
+            object saveWithDocument = true;
+            //打开word文档
+            //Microsoft.Office.Interop.Word.Document doc = wApp.Documents.Open(ref filename, ref Nothing, ref Nothing, ref Nothing,
+            //   ref Nothing, ref Nothing, ref Nothing, ref Nothing,
+            //   ref Nothing, ref Nothing, ref Nothing, ref Nothing,
+            //   ref Nothing, ref Nothing, ref Nothing, ref Nothing);
+            try
+            {
+                //标签
+                object bookMark = BookMark;
+                //图片
+                string replacePic = strPicAdd;
+                if (wDoc.Bookmarks.Exists(Convert.ToString(bookMark)) == true)
+                {
+                    //查找书签
+                    wDoc.Bookmarks.get_Item(ref bookMark).Select();
+                    //设置图片位置
+                    wApp.Selection.ParagraphFormat.Alignment = Microsoft.Office.Interop.Word.WdParagraphAlignment.wdAlignParagraphRight;
+                    //在书签的位置添加图片
+                    InlineShape inlineShape = wApp.Selection.InlineShapes.AddPicture(replacePic, ref linkToFile, ref saveWithDocument, ref Nothing);
+                    //设置图片大小
+                    //inlineShape.Width = 20;
+                    //inlineShape.Height = 20;
+
+                    //wDoc.Save();
+                }
+                else
+                {
+                    //word文档中不存在该书签，关闭文档
+                    wDoc.Close(ref Nothing, ref Nothing, ref Nothing);
+                }
+            }
+            catch
+            {
+            }
+        }
     }
 }  

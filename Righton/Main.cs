@@ -13,6 +13,7 @@ namespace Righton
     public partial class form_Main : Form
     {
         public DataTable dtGene_Ori;
+        public double dblRS;
         public form_Main()
         {
             InitializeComponent();
@@ -51,7 +52,7 @@ namespace Righton
                     }
                     else
                     {
-                        MessageBox.Show("导入成功!");
+                        //MessageBox.Show("导入成功!");
                         btn_cal.Enabled = true;
                     }
                 }
@@ -123,7 +124,7 @@ namespace Righton
                 ////5.RSu =（0.47× GBR7组值）-（0.34× ER组值）+（1.04× 增值组值）+（0.1×侵袭组值）+（0.05×CD68）-(0.08×GSTM1) -（0.07×BAG1）																		
                 ////如果RSu < 0,则RS = 0    如果0≤ RSu≤100，RS = 20×(RSu - 6.7)     如果RSu > 100，则RS = 100
                 double dblRsu = (0.47 * dblGBR7) - (0.34 * dblER) + (1.04 * dblIncrement) + (0.1 * dblAttack) + (0.05 * double.Parse(dtGene_Process.Rows[14][1].ToString())) - (0.08 * double.Parse(dtGene_Process.Rows[9][1].ToString())) - (0.07 * double.Parse(dtGene_Process.Rows[15][1].ToString()));
-                double dblRS = 0;
+                dblRS = 0;
                 if (dblRsu < 0)
                 {
                     dblRS = 0;
@@ -137,9 +138,7 @@ namespace Righton
                     dblRS = 100;
                 }
                 //lab_Result.Text = "RS = " + dblRS.ToString();
-                //lab_Result.Visible = true;
-                Base be = new Base();
-                be.dbRS = dblRS;
+                //lab_Result.Visible = true;               
                 btn_report.Enabled = true;
                 MessageBox.Show("RS = " + dblRS.ToString());
             }
@@ -164,8 +163,9 @@ namespace Righton
         private void btn_report_Click(object sender, EventArgs e)
         {
             form_Report fr = new form_Report();
+            fr.dbRS = dblRS;
             fr.Show();
-            this.Close();
+            this.Visible = false;
         }
     }
 }
