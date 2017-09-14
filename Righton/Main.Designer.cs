@@ -41,6 +41,7 @@
             this.btn_insertData = new System.Windows.Forms.Button();
             this.btn_cal = new System.Windows.Forms.Button();
             this.panel_workspace = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Gene_Process)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Gene_Ori)).BeginInit();
@@ -181,12 +182,22 @@
             this.panel_workspace.TabIndex = 1;
             this.panel_workspace.Visible = false;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(204, 83);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(76, 34);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // form_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(864, 790);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lab_Result);
             this.Controls.Add(this.dgv_Gene_Process);
             this.Controls.Add(this.dgv_Gene_Ori);
@@ -225,6 +236,7 @@
         private System.Windows.Forms.Button btn_insertData;
         private System.Windows.Forms.Button btn_cal;
         private System.Windows.Forms.Panel panel_workspace;
+        private System.Windows.Forms.Button button1;
     }
 }
 
