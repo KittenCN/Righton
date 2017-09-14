@@ -53,7 +53,10 @@ namespace ExcelHelper
                 }
                 return Result;
             }
-            catch (Exception ex) { return null; }
+            catch (Exception ex)
+            {                
+                return null;
+            }
             finally
             {
                 workbook.Close(false, oMissiong, oMissiong);

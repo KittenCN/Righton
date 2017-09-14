@@ -59,6 +59,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report.Designer.cs">
+      <DependentUpon>Report.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +73,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Report.resx">
+      <DependentUpon>Report.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
@@ -81,6 +90,9 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Model\Report.docx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Model\Report.dot">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="Properties\Settings.settings">
@@ -100,6 +112,10 @@
     <ProjectReference Include="..\ExcelHelper\ExcelHelper.csproj">
       <Project>{38c98476-7f9f-4b00-a696-c7242e0c1606}</Project>
       <Name>ExcelHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WordHelper\WordHelper.csproj">
+      <Project>{0951470d-1462-462e-a2cf-559772d69bae}</Project>
+      <Name>WordHelper</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -139,6 +155,9 @@
     <Content Include="Pic\logo.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Upload\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

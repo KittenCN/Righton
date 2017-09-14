@@ -155,5 +155,37 @@ namespace Righton
         {
             panel_workspace.BackColor = Color.FromArgb(65, 204, 212, 230);
         }
+
+        private void btn_report_Click(object sender, EventArgs e)
+        {
+            WordHelper.WordHelper wh = new WordHelper.WordHelper();
+            string path = Application.StartupPath;
+            wh.CreateNewWordDocument(path + "//Model//Report.dot");
+
+            wh.Replace("报告编号", "1234567890");
+            wh.Replace("报告时间2", "1234-5678-90");
+            wh.Replace("姓名", "3333");
+
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Word文件(*.doc)|*.doc";
+            // Show save file dialog box
+            DialogResult result = saveFileDialog.ShowDialog();
+            //点了保存按钮进入
+            if (result == DialogResult.OK)
+            {
+                //获得文件路径
+                string localFilePath = saveFileDialog.FileName.ToString();
+                try
+                {
+                    wh.SaveAs(localFilePath);
+                    wh.Close();
+                    MessageBox.Show("保存成功", "消息", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("保存失败::" + ex.Message.ToString(), "消息", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
     }
 }
