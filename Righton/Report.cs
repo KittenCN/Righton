@@ -123,7 +123,7 @@ namespace Righton
         {
             form_Main fm = new form_Main();
             fm.Visible = true;
-            this.Close();
+            this.Visible = false;
         }
 
         private void button1_Click(object sender, EventArgs e)

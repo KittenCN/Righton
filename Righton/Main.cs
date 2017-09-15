@@ -167,5 +167,10 @@ namespace Righton
             fr.Show();
             this.Visible = false;
         }
+        protected override void OnClosing(CancelEventArgs e)
+        {
+            base.OnClosing(e);
+            Application.Exit(e);
+        }
     }
 }
