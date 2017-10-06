@@ -15,6 +15,7 @@ namespace Righton
     {
         public DataTable dtGene_Ori;
         public Double dbRS;
+        public string strVar;
         public form_Report()
         {
             InitializeComponent();
@@ -185,6 +186,33 @@ namespace Righton
         {
             base.OnClosing(e);
             Application.Exit(e);
+        }
+
+        private void btn_next_Click(object sender, EventArgs e)
+        {
+            strVar = textBox1.Text;
+            for (int i = 3; i < 17; i++)
+            {
+                if (i != 18 && i != 19)
+                {
+                    foreach (Control cur in Controls)
+                    {
+                        if (cur is TextBox && cur.Name == "textBox" + i.ToString())
+                        {
+                            strVar = strVar + "|" + cur.Text;
+                        }
+                    }
+                }
+            }
+            form_Main fr = new form_Main();
+            fr.strlVar = strVar;
+            fr.Show();
+            this.Visible = false;
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            textBox10.Text = dateTimePicker1.Value.ToShortDateString();
         }
     }
 }

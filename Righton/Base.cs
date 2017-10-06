@@ -12,5 +12,10 @@ namespace Righton
             get { return dbRS; }
             set { dbRS = value; }
         }
+        public string strVarchar
+        {
+            get { return strVarchar; }
+            set { strVarchar = value; }
+        }
     }
 }

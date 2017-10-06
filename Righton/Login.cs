@@ -29,12 +29,25 @@ namespace Righton
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-
+            if (txtUserName.Text == "admin" && txtPWD.Text == "admin")
+            {
+                form_Report fr = new form_Report();
+                fr.Show();
+                this.Visible = false;
+            }
+            else
+            {
+                MessageBox.Show("账号密码错误!");
+            }
         }
 
         private void txtUserName_Click(object sender, EventArgs e)
         {
             txtUserName.Text = "";
+        }
+        private void txtPWD_Click(object sender, EventArgs e)
+        {
+            txtPWD.Text = "";
         }
     }
 }
