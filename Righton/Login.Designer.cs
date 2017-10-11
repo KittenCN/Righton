@@ -49,23 +49,23 @@
             // 
             // txtUserName
             // 
-            this.txtUserName.Font = new System.Drawing.Font("宋体", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtUserName.Location = new System.Drawing.Point(267, 285);
-            this.txtUserName.Multiline = true;
+            this.txtUserName.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtUserName.Location = new System.Drawing.Point(534, 646);
+            this.txtUserName.Margin = new System.Windows.Forms.Padding(6);
             this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(337, 50);
+            this.txtUserName.Size = new System.Drawing.Size(670, 44);
             this.txtUserName.TabIndex = 1;
             this.txtUserName.Text = "用户名";
             this.txtUserName.Click += new System.EventHandler(this.txtUserName_Click);
             // 
             // txtPWD
             // 
-            this.txtPWD.Font = new System.Drawing.Font("宋体", 26.25F);
-            this.txtPWD.Location = new System.Drawing.Point(267, 345);
-            this.txtPWD.Multiline = true;
+            this.txtPWD.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtPWD.Location = new System.Drawing.Point(534, 702);
+            this.txtPWD.Margin = new System.Windows.Forms.Padding(6);
             this.txtPWD.Name = "txtPWD";
             this.txtPWD.PasswordChar = '*';
-            this.txtPWD.Size = new System.Drawing.Size(337, 50);
+            this.txtPWD.Size = new System.Drawing.Size(670, 44);
             this.txtPWD.TabIndex = 2;
             this.txtPWD.Text = "Password";
             this.txtPWD.Click += new System.EventHandler(this.txtPWD_Click);
@@ -73,10 +73,11 @@
             // btnLogin
             // 
             this.btnLogin.BackColor = System.Drawing.Color.DarkTurquoise;
-            this.btnLogin.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnLogin.Location = new System.Drawing.Point(267, 409);
+            this.btnLogin.Font = new System.Drawing.Font("宋体", 12F);
+            this.btnLogin.Location = new System.Drawing.Point(534, 758);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(6);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(337, 50);
+            this.btnLogin.Size = new System.Drawing.Size(670, 56);
             this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "登陆";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -84,17 +85,17 @@
             // 
             // form_Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(863, 790);
+            this.ClientSize = new System.Drawing.Size(1726, 1580);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPWD);
             this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.pb_Logo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "form_Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
