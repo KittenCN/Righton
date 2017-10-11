@@ -195,13 +195,15 @@ namespace Righton
             {
                 if (i != 18 && i != 19)
                 {
-                    foreach (Control cur in Controls)
-                    {
-                        if (cur is TextBox && cur.Name == "textBox" + i.ToString())
-                        {
-                            strVar = strVar + "|" + cur.Text;
-                        }
-                    }
+                    //foreach (Control cur in Controls)
+                    //{
+                    //    if (cur is TextBox && cur.Name == "textBox" + i.ToString())
+                    //    {
+                    //        strVar = strVar + "|" + cur.Text;
+                    //    }
+                    //}
+                    TextBox tbx = this.Controls.Find("textBox" + i.ToString(), true).FirstOrDefault() as TextBox;
+                    strVar = strVar + "|" + tbx.Text;
                 }
             }
             form_Main fr = new form_Main();
