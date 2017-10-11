@@ -20,8 +20,6 @@ namespace Righton
         public form_Main()
         {
             InitializeComponent();
-            this.Width = 883;
-            this.Height = 833;
         }
         private void btn_insertData_Click(object sender, EventArgs e)
         {

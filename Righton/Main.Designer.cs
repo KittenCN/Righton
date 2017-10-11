@@ -43,12 +43,13 @@
             this.panel_workspace = new System.Windows.Forms.Panel();
             this.btn_report = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.textBox17 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.textBox25 = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
@@ -67,17 +68,16 @@
             this.button1 = new System.Windows.Forms.Button();
             this.textBox21 = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.label7 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label17 = new System.Windows.Forms.Label();
             this.textBox18 = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.textBox19 = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.btn_back = new System.Windows.Forms.Button();
             this.textBox16 = new System.Windows.Forms.TextBox();
             this.textBox15 = new System.Windows.Forms.TextBox();
@@ -261,29 +261,26 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(430, 121);
+            this.panel1.Location = new System.Drawing.Point(431, 121);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(402, 134);
             this.panel1.TabIndex = 12;
             // 
-            // label1
+            // textBox17
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)), true);
-            this.label1.Location = new System.Drawing.Point(3, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "检测仪器/方法";
+            this.textBox17.Location = new System.Drawing.Point(62, 97);
+            this.textBox17.Name = "textBox17";
+            this.textBox17.Size = new System.Drawing.Size(200, 21);
+            this.textBox17.TabIndex = 4;
             // 
-            // label2
+            // label4
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(4, 50);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(149, 12);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "检测方法:实时荧光定量PCR";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 100);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(59, 12);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "检测仪器:";
             // 
             // label3
             // 
@@ -294,21 +291,25 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "实验试剂:乳腺癌21基因检测试剂盒(源奇生物)";
             // 
-            // label4
+            // label2
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(8, 100);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 12);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "检测仪器:";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(7, 50);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(149, 12);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "检测方法:实时荧光定量PCR";
             // 
-            // textBox17
+            // label1
             // 
-            this.textBox17.Location = new System.Drawing.Point(73, 97);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(184, 21);
-            this.textBox17.TabIndex = 4;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)), true);
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.label1.Location = new System.Drawing.Point(4, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(119, 16);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "检测仪器/方法";
             // 
             // panel2
             // 
@@ -337,9 +338,19 @@
             this.panel2.Size = new System.Drawing.Size(401, 232);
             this.panel2.TabIndex = 13;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)), true);
+            this.label5.Location = new System.Drawing.Point(3, 21);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(119, 16);
+            this.label5.TabIndex = 79;
+            this.label5.Text = "检测说明/图片";
+            // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(248, 182);
+            this.button5.Location = new System.Drawing.Point(309, 182);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
             this.button5.TabIndex = 78;
@@ -349,10 +360,10 @@
             // 
             // textBox25
             // 
-            this.textBox25.Location = new System.Drawing.Point(87, 103);
+            this.textBox25.Location = new System.Drawing.Point(94, 105);
             this.textBox25.Name = "textBox25";
             this.textBox25.ReadOnly = true;
-            this.textBox25.Size = new System.Drawing.Size(141, 21);
+            this.textBox25.Size = new System.Drawing.Size(200, 21);
             this.textBox25.TabIndex = 77;
             // 
             // label25
@@ -366,7 +377,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(248, 103);
+            this.button6.Location = new System.Drawing.Point(309, 103);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 23);
             this.button6.TabIndex = 75;
@@ -376,10 +387,10 @@
             // 
             // textBox26
             // 
-            this.textBox26.Location = new System.Drawing.Point(87, 184);
+            this.textBox26.Location = new System.Drawing.Point(94, 184);
             this.textBox26.Name = "textBox26";
             this.textBox26.ReadOnly = true;
-            this.textBox26.Size = new System.Drawing.Size(141, 21);
+            this.textBox26.Size = new System.Drawing.Size(200, 21);
             this.textBox26.TabIndex = 74;
             // 
             // label26
@@ -393,7 +404,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(247, 157);
+            this.button3.Location = new System.Drawing.Point(309, 155);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 72;
@@ -403,10 +414,10 @@
             // 
             // textBox23
             // 
-            this.textBox23.Location = new System.Drawing.Point(87, 76);
+            this.textBox23.Location = new System.Drawing.Point(94, 76);
             this.textBox23.Name = "textBox23";
             this.textBox23.ReadOnly = true;
-            this.textBox23.Size = new System.Drawing.Size(141, 21);
+            this.textBox23.Size = new System.Drawing.Size(200, 21);
             this.textBox23.TabIndex = 71;
             // 
             // label23
@@ -420,7 +431,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(248, 74);
+            this.button4.Location = new System.Drawing.Point(309, 74);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 69;
@@ -430,10 +441,10 @@
             // 
             // textBox24
             // 
-            this.textBox24.Location = new System.Drawing.Point(86, 157);
+            this.textBox24.Location = new System.Drawing.Point(94, 157);
             this.textBox24.Name = "textBox24";
             this.textBox24.ReadOnly = true;
-            this.textBox24.Size = new System.Drawing.Size(141, 21);
+            this.textBox24.Size = new System.Drawing.Size(200, 21);
             this.textBox24.TabIndex = 68;
             // 
             // label24
@@ -447,7 +458,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(248, 128);
+            this.button2.Location = new System.Drawing.Point(309, 128);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 66;
@@ -457,10 +468,10 @@
             // 
             // textBox22
             // 
-            this.textBox22.Location = new System.Drawing.Point(87, 130);
+            this.textBox22.Location = new System.Drawing.Point(94, 130);
             this.textBox22.Name = "textBox22";
             this.textBox22.ReadOnly = true;
-            this.textBox22.Size = new System.Drawing.Size(141, 21);
+            this.textBox22.Size = new System.Drawing.Size(200, 21);
             this.textBox22.TabIndex = 65;
             // 
             // label22
@@ -474,7 +485,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(248, 47);
+            this.button1.Location = new System.Drawing.Point(309, 47);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 63;
@@ -484,10 +495,10 @@
             // 
             // textBox21
             // 
-            this.textBox21.Location = new System.Drawing.Point(87, 50);
+            this.textBox21.Location = new System.Drawing.Point(94, 49);
             this.textBox21.Name = "textBox21";
             this.textBox21.ReadOnly = true;
-            this.textBox21.Size = new System.Drawing.Size(141, 21);
+            this.textBox21.Size = new System.Drawing.Size(200, 21);
             this.textBox21.TabIndex = 62;
             // 
             // label21
@@ -498,16 +509,6 @@
             this.label21.Size = new System.Drawing.Size(77, 12);
             this.label21.TabIndex = 61;
             this.label21.Text = "增殖相关基因";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)), true);
-            this.label5.Location = new System.Drawing.Point(3, 21);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(119, 16);
-            this.label5.TabIndex = 79;
-            this.label5.Text = "检测说明/图片";
             // 
             // panel3
             // 
@@ -526,15 +527,39 @@
             this.panel3.Size = new System.Drawing.Size(401, 119);
             this.panel3.TabIndex = 14;
             // 
-            // label6
+            // dateTimePicker2
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)), true);
-            this.label6.Location = new System.Drawing.Point(6, 19);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(119, 16);
-            this.label6.TabIndex = 80;
-            this.label6.Text = "检测人员/时间";
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker2.Location = new System.Drawing.Point(268, 73);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(116, 21);
+            this.dateTimePicker2.TabIndex = 88;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(209, 79);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(53, 12);
+            this.label7.TabIndex = 87;
+            this.label7.Text = "报告时间";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(72, 73);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(111, 21);
+            this.dateTimePicker1.TabIndex = 86;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(6, 79);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(53, 12);
+            this.label17.TabIndex = 85;
+            this.label17.Text = "检测时间";
             // 
             // textBox18
             // 
@@ -568,39 +593,15 @@
             this.label19.TabIndex = 81;
             this.label19.Text = "检验人员";
             // 
-            // label17
+            // label6
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(5, 73);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(53, 12);
-            this.label17.TabIndex = 85;
-            this.label17.Text = "检测时间";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(72, 73);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(111, 21);
-            this.dateTimePicker1.TabIndex = 86;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(268, 73);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(116, 21);
-            this.dateTimePicker2.TabIndex = 88;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(209, 79);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(53, 12);
-            this.label7.TabIndex = 87;
-            this.label7.Text = "报告时间";
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)), true);
+            this.label6.Location = new System.Drawing.Point(6, 19);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(119, 16);
+            this.label6.TabIndex = 80;
+            this.label6.Text = "检测人员/时间";
             // 
             // btn_back
             // 
