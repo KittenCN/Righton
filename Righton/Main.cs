@@ -209,6 +209,7 @@ namespace Righton
                 }
                 wh.Replace("检测仪器", textBox17.Text);
                 wh.Replace("检测结果", dblRS.ToString());
+                wh.Replace("RS", dblRS.ToString());
                 string strDan = "";
                 string strPro = "";
                 if (dblRS < 18)
